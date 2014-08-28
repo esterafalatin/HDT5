@@ -62,7 +62,21 @@ def proceso(env, processID, memoria, RAM, CPU, WAITING,instrucciones):
 
                 else:
                     instrucciones = 0
-                    
+# Se configura y empieza la simulacion del sistema operativo
+print ('Sistema Operativo')
+random.seed(RANDOM_SEED)
+env = simpy.Environment()
+sumatoria = 0
+n = 0
+# Inicia los procesos y los corre.
+CPU = simpy.Resource(env, capacity=1)
+RAM = simpy.Container(env, init = 100, capacity=100)
+WAITING = simpy.Resource(env, capacity=1)
+env.process(source(env,NEW_PROCESS, INTERVAL_PROCESS, RAM, CPU, WAITING))
+env.run()
+promedio = sumatoria/n
+print ('Tiempo total en ejecutarse: ',sumatoria, 'Promedio: ',(promedio))
+
             # Tiempo terminado del proceso realizado por el CPU
             if instrucciones > 0:
                 siguiente = random.choice(["ready", "waiting"])
