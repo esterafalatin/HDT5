@@ -91,7 +91,7 @@ print ('Sistema Operativo')
 random.seed(RANDOM_SEED)
 env = simpy.Environment()
 sumatoria = 0
-n = 1
+n = 0
 # Inicia los procesos y los corre.
 CPU = simpy.Resource(env, capacity=1)
 RAM = simpy.Container(env, init = 100, capacity=100)
