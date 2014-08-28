@@ -3,7 +3,7 @@
 # Algoritmos y Estructuras de Datos
 # Seccion 30
 # Esteban Barrera 13413
-# Henry Orellana 130
+# Henry Orellana 13048
 # Proposito del programa: Simula el funcionamiento de un sistema operativo.
 # Referencia: ejemplo3.py que se presento en clase.
 #-------------------------------------------------------------------------------------------------------------------------------------------------------------
